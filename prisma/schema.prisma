@@ -1,0 +1,42 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Generation {
+  id        String   @id @default(uuid())
+  prompt    String
+  style     String?
+  model     String   // e.g. "qwen", "sdxl"
+  resolution String?
+  
+  imageUrl  String?
+  status    String   // "PENDING", "COMPLETED", "FAILED"
+  error     String?
+
+  duration  Float?   // in seconds
+  cost      Float?   // in USD
+  
+  createdAt DateTime @default(now())
+}
+
+model SystemConfig {
+  key       String   @id
+  value     String
+  updatedAt DateTime @updatedAt
+}
+
+model ApiKey {
+  id        String   @id @default(uuid())
+  name      String
+  key       String   @unique
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+}
+
