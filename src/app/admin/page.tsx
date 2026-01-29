@@ -46,25 +46,11 @@ export default function AdminPage() {
                 />
             </div>
 
-            {/* Recent Activity Mock */}
+            {/* Recent Activity */}
             <div className="rounded-xl border border-white/5 bg-white/5 glass p-6">
                 <h2 className="text-lg font-semibold mb-4">Recent Allocations</h2>
-                <div className="space-y-4">
-                    {[1, 2, 3].map((i) => (
-                        <div key={i} className="flex items-center justify-between p-4 rounded-lg bg-black/40 border border-white/5">
-                            <div className="flex items-center gap-4">
-                                <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
-                                    <Zap className="w-5 h-5" />
-                                </div>
-                                <div>
-                                    <div className="text-sm font-medium text-white">Generation Task #{1000 + i}</div>
-                                    <div className="text-xs text-muted-foreground">Completed in 4.2s • Flux Model</div>
-                                </div>
-                            </div>
-                            <div className="text-sm font-mono text-emerald-400">$0.002</div>
-                        </div>
-                    ))}
-                </div>
+                {/* Real data would map here, for now empty state */}
+                <div className="text-muted-foreground text-sm">No recent activity</div>
             </div>
 
         </div>

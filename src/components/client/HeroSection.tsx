@@ -90,7 +90,7 @@ export function HeroSection() {
                     <div className="aspect-square bg-white/5 relative group">
                         {/* Placeholder for now */}
                         <div className="w-full h-full bg-gradient-to-br from-gray-900 to-black flex items-center justify-center text-white/20">
-                            [Generated Image Here]
+                            <img src={result} alt="Generated" className="w-full h-full object-cover" />
                         </div>
                         <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                             <Button variant="glass" size="sm" className="w-full">Download</Button>

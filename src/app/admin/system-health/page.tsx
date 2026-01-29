@@ -4,11 +4,9 @@ import { Server, Wifi, Database, Cpu } from 'lucide-react';
 
 export default function SystemHealthPage() {
     const services = [
-        { name: 'API Gateway', status: 'operational', icon: Wifi, uptime: '99.9%' },
-        { name: 'GPU Cluster (East)', status: 'operational', icon: Cpu, uptime: '99.5%' },
-        { name: 'GPU Cluster (West)', status: 'degraded', icon: Cpu, uptime: '89.2%' },
+        { name: 'API Gateway', status: 'operational', icon: Wifi, uptime: '100%' },
+        { name: 'GPU Cluster', status: 'operational', icon: Cpu, uptime: '100%' },
         { name: 'Image Database', status: 'operational', icon: Database, uptime: '100%' },
-        { name: 'Auth Service', status: 'operational', icon: Server, uptime: '99.99%' },
     ];
 
     return (
