@@ -6,8 +6,8 @@ from tqdm import tqdm
 HF_TOKEN = os.environ.get("HF_TOKEN")
 Models = [
     {
-        "url": "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt",
-        "path": "/ComfyUI/models/checkpoints/v1-5-pruned-emaonly.ckpt"
+        "url": "https://huggingface.co/Lykon/DreamShaper/resolve/main/DreamShaper_8_pruned.safetensors",
+        "path": "/ComfyUI/models/checkpoints/DreamShaper_8_pruned.safetensors"
     }
 ]
 
